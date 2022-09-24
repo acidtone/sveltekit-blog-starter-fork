@@ -8,7 +8,7 @@ export let data
 <svelte:head>
 	<title>{siteTitle}</title>
 </svelte:head>
-
-
-{@html data.ReadMe}
-<!-- This is the README.md file in the root of the repo. It serves double duty as the homepage's content. If you'd rather use your own HTML and/or Svelte, you can delete/modify everything in this file. -->
+<main>
+	{@html data.ReadMe}
+	<!-- This is the README.md file in the root of the repo. It serves double duty as the homepage's content. If you'd rather use your own HTML and/or Svelte, you can delete/modify everything in this file. -->
+</main>

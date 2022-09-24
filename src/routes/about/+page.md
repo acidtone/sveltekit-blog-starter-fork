@@ -1,6 +1,7 @@
 <svelte:head>
 	<title>About</title>
 </svelte:head>
+<main>
 
 # About
 
@@ -19,3 +20,5 @@ src/routes/about/+page.md
 ```
 
 Here's the [home link](/) if you wanna go back.
+
+</main>
