@@ -4,8 +4,8 @@ import { json } from '@sveltejs/kit'
 export const prerender = true
 
 export const GET = async ({ params }) => {
-	const { category } = params
-	const options = { category, limit: -1 }
+	const { tag } = params
+	const options = { tag, limit: -1 }
 
   const { posts } = await fetchPosts(options)
 		

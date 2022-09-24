@@ -2,7 +2,7 @@
 title: "A Markdown post with a Svelte component"
 date: "2021-12-01"
 updated: "2021-12-01"
-categories: 
+tags: 
   - "sveltekit"
   - "markdown"
   - "svelte"

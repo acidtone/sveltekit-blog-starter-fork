@@ -8,7 +8,7 @@ This starter contains everything you need to get up and running with [SvelteKit]
 - 📦 **Zero-config prefetching** for automatic, fast background preloading of all top-level pages
 - ✍️ **Markdown support** with a pre-configured blog
 	- 📑 **Pagination** included (_can customize posts per page_)
-	- ✅ **Category pages** included
+	- ✅ **Tag pages** included
 	- 💬 **Posts JSON API**
 - 💅 **Sass** pre-installed and -configured
 - 📝 **mdsvex** pre-installed--use Svelte components inside Markdown!
@@ -50,7 +50,7 @@ Be sure to update `src/lib/config.js` to reflect your site's domain, preferences
 
 ## Adding new posts
 
-Adding new posts is as simple as dropping a new `.md` file into `src/lib/posts`. New posts will automatically show up on the site, be added to the posts API, and any category pages.
+Adding new posts is as simple as dropping a new `.md` file into `src/lib/posts`. New posts will automatically show up on the site, be added to the posts API, and any tag pages.
 
 A few demo Markdown posts are included, and highlight some of the features of this starter. These demo posts can be updated or removed, but it may be best to use one as a starting point, just for the frontmatter properties.
 
@@ -60,14 +60,14 @@ If you want to use other frontmatter properties in the template (or just modify 
 
 The starter will still work without `date` properties in your posts, but the sorting won't be right.
 
-Also: while there's no link to it by default, `/blog/category` exists as an archive of all your post categories.
+Also: while there's no link to it by default, `/blog/tag` exists as an archive of all your post tags.
 
 
 ### Pagination
 
 Pagination automatically kicks in once you have more posts than the `postsPerPage` option in `src/lib/config.js`. This means you won't see the pagination right away unless you either change `postsPerPage` to a very low number, or add several more Markdown files to the `src/lib/posts` folder.
 
-**Note:** both the normal `/blog` feed _and_ the category feeds at `/category/[category]` are automatically paginated.
+**Note:** both the normal `/blog` feed _and_ the tag feeds at `/tag/[tag]` are automatically paginated.
 
 
 ### RSS

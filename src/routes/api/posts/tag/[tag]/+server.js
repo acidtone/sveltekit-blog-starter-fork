@@ -4,11 +4,11 @@ import { error, json } from '@sveltejs/kit'
 export const prerender = true
 
 export const GET = async ({ params }) => {
-	const { category } = params
-  console.log(category)
+	const { tag } = params
+  console.log(tag)
 	try {
-    console.log(category)
-		const { posts } = await fetchPosts({ category })
+    console.log(tag)
+		const { posts } = await fetchPosts({ tag })
 		
 		return json(posts)
 	}

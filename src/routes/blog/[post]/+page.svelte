@@ -2,7 +2,7 @@
 <script>
 export let data
 
-const { title, excerpt, date, updated, coverImage, coverWidth, coverHeight, categories } = data.meta
+const { title, excerpt, date, updated, coverImage, coverWidth, coverHeight, tags } = data.meta
 </script>
 
 
@@ -43,14 +43,14 @@ const { title, excerpt, date, updated, coverImage, coverWidth, coverHeight, cate
 	
 		{@html data.PostContent}
 	
-		{#if categories}
+		{#if tags}
 			<aside class="post-footer">
 				<h2>Posted in: </h2>
 				<ul>
-					{#each categories as category}
+					{#each tags as tag}
 						<li>
-							<a href="/blog/category/{category}/">
-								{ category }
+							<a href="/blog/tag/{tag}/">
+								{ tag }
 							</a>
 						</li>
 					{/each}

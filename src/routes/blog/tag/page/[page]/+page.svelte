@@ -1,11 +1,11 @@
-<!-- Renders posts listed by category -->
+<!-- Renders posts listed by tag -->
 <script>
 	import PostsList from '$lib/components/PostsList.svelte'
 	import Pagination from '$lib/components/Pagination.svelte'
-	import { siteDescription, postsPerPage } from '$lib/config'
+	import { siteDescription } from '$lib/config'
 
 	export let data
-	const { page, category, totalPosts, posts } = data 
+  const { page, totalPosts, posts } = data
 
 	$: lowerBound = (page * postsPerPage) - (postsPerPage - 1) || 1
 	$: upperBound = Math.min(page * postsPerPage, totalPosts)
@@ -13,23 +13,19 @@
 
 
 <svelte:head>
-	<title>Blog category {category} - page {page}</title>
+	<title>Blog tag - page {page}</title>
 	<meta data-key="description" name={siteDescription}>
 </svelte:head>
 
 <main>
 	<!-- TODO: this is duplicated across multiple `+page.svelte` files -->
-	{#if posts && posts.length}
-		<h1>
-			Category: {category}
-			<br />
-			<small>Posts {lowerBound}–{upperBound} of {totalPosts}</small>
-		</h1>
-		<Pagination currentPage={page} {totalPosts} path="/blog/category/{category}/page" />
+	{#if posts.length}
+		<h1>Posts {lowerBound}–{upperBound} of {totalPosts}</h1>
+		<Pagination currentPage={page} {totalPosts} />
 	
 		<PostsList {posts} />
 	
-		<Pagination currentPage={page} {totalPosts} path="/blog/category/{category}/page" />
+		<Pagination currentPage={page} {totalPosts} />
 	{:else}
 		<h1>Oops!</h1>
 	

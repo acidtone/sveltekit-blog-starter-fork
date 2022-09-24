@@ -2,7 +2,7 @@
 title: "Automatic heading links in mdsvex"
 date: "2021-10-26"
 updated: "2021-11-01"
-categories: 
+tags: 
   - "sveltekit"
   - "markdown"
 coverImage: "/images/jefferson-santos-fCEJGBzAkrU-unsplash.jpg"

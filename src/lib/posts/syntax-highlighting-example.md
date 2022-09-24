@@ -2,7 +2,7 @@
 title: "Syntax highlighting with mdsvex"
 date: "2021-12-01"
 updated: "2021-12-01"
-categories: 
+tags: 
   - "sveltekit"
   - "web"
   - "css"
